@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="logicopDataSet" targetNamespace="http://tempuri.org/logicopDataSet.xsd" xmlns:mstns="http://tempuri.org/logicopDataSet.xsd" xmlns="http://tempuri.org/logicopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="logicopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="logicopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.smacop2.Properties.Settings.GlobalReference.Default.logicopConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="logicopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="logicopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.smacop2.Properties.Settings.GlobalReference.Default.logicopConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstentradasmatTableAdapter" GeneratorDataComponentClassName="lstentradasmatTableAdapter" Name="lstentradasmat" UserDataComponentName="lstentradasmatTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString (Settings)" DbObjectName="def.logicop.lstentradasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        nsis, nrec, fech, prov, mat, equ, ope, rkm, volm, cosm, flem, tifkm, timat, anul, matfle, ttra, hini, hfin, dcarg
+FROM         logicop.lstentradasmat</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nsis" DataSetColumn="nsis" />
+              <Mapping SourceColumn="nrec" DataSetColumn="nrec" />
+              <Mapping SourceColumn="fech" DataSetColumn="fech" />
+              <Mapping SourceColumn="prov" DataSetColumn="prov" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="equ" DataSetColumn="equ" />
+              <Mapping SourceColumn="ope" DataSetColumn="ope" />
+              <Mapping SourceColumn="rkm" DataSetColumn="rkm" />
+              <Mapping SourceColumn="volm" DataSetColumn="volm" />
+              <Mapping SourceColumn="cosm" DataSetColumn="cosm" />
+              <Mapping SourceColumn="flem" DataSetColumn="flem" />
+              <Mapping SourceColumn="tifkm" DataSetColumn="tifkm" />
+              <Mapping SourceColumn="timat" DataSetColumn="timat" />
+              <Mapping SourceColumn="anul" DataSetColumn="anul" />
+              <Mapping SourceColumn="matfle" DataSetColumn="matfle" />
+              <Mapping SourceColumn="ttra" DataSetColumn="ttra" />
+              <Mapping SourceColumn="hini" DataSetColumn="hini" />
+              <Mapping SourceColumn="hfin" DataSetColumn="hfin" />
+              <Mapping SourceColumn="dcarg" DataSetColumn="dcarg" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString (Settings)" DbObjectName="def.logicop.lstentradasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT anul, cosm, dcarg, equ, fech, flem, hfin, hini, mat, matfle, nrec, nsis, ope, prov, rkm, tifkm, timat, ttra, volm FROM def.logicop.lstentradasmat</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString (Settings)" DbObjectName="def.logicop.lstentradasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT anul, cosm, dcarg, equ, fech, flem, hfin, hini, mat, matfle, nrec, nsis, ope, prov, rkm, tifkm, timat, ttra, volm FROM logicop.lstentradasmat WHERE (prov = @p) AND (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="p" ColumnName="prov" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@p" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="prov" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString (Settings)" DbObjectName="def.logicop.lstentradasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="reporte_fecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="reporte_fecha" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="reporte_fecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT anul, cosm, dcarg, equ, fech, flem, hfin, hini, mat, matfle, nrec, nsis, ope, prov, rkm, tifkm, timat, ttra, volm FROM logicop.lstentradasmat WHERE (fech = @a)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString (Settings)" DbObjectName="def.logicop.lstentradasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="reporte_general" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="reporte_general" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="reporte_general">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT anul, cosm, dcarg, equ, fech, flem, hfin, hini, mat, matfle, nrec, nsis, ope, prov, rkm, tifkm, timat, ttra, volm FROM logicop.lstentradasmat WHERE (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstentradasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="resumen_comisionTableAdapter" GeneratorDataComponentClassName="resumen_comisionTableAdapter" Name="resumen_comision" UserDataComponentName="resumen_comisionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.resumen_comision" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `fech`, `ACCESO`, `ope`, `nomempl`, `viajes`, `recorrido`, `rec_km_fle`, `comision` FROM `logicop`.`resumen_comision`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fech" DataSetColumn="fech" />
+              <Mapping SourceColumn="ACCESO" DataSetColumn="ACCESO" />
+              <Mapping SourceColumn="ope" DataSetColumn="ope" />
+              <Mapping SourceColumn="nomempl" DataSetColumn="nomempl" />
+              <Mapping SourceColumn="viajes" DataSetColumn="viajes" />
+              <Mapping SourceColumn="recorrido" DataSetColumn="recorrido" />
+              <Mapping SourceColumn="rec_km_fle" DataSetColumn="rec_km_fle" />
+              <Mapping SourceColumn="comision" DataSetColumn="comision" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.resumen_comision" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        fech, ACCESO, ope, nomempl, viajes, recorrido, rec_km_fle, comision
+FROM           resumen_comision
+WHERE        (fech = @Param1) AND (ACCESO = @Param2) AND (ope = @Param3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fech" DataSourceName="def.logicop.resumen_comision" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="ACCESO" DataSourceName="def.logicop.resumen_comision" DataTypeServer="varchar(8)(8)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="ACCESO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="ope" DataSourceName="def.logicop.resumen_comision" DataTypeServer="varchar(16)(16)" DbType="String" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="VarChar" Scale="0" Size="16" SourceColumn="ope" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.resumen_comision" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `fech`, `ACCESO`, `ope`, `nomempl`, `viajes`, `recorrido`, `rec_km_fle`, `comision` FROM `logicop`.`resumen_comision`
+WHERE        fech BETWEEN @Param1 AND @P </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fech" DataSourceName="def.logicop.resumen_comision" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="P" ColumnName="fech" DataSourceName="def.logicop.resumen_comision" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@P" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.resumen_comision" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `fech`, `ACCESO`, `ope`, `nomempl`, `viajes`, `recorrido`, `rec_km_fle`, `comision` 
+FROM `logicop`.`resumen_comision`  
+where ope=@op and fech  
+BETWEEN @Param1 AND @P </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="op" ColumnName="ope" DataSourceName="def.logicop.resumen_comision" DataTypeServer="varchar(16)(16)" DbType="String" Direction="Input" ParameterName="@op" Precision="0" ProviderType="VarChar" Scale="0" Size="16" SourceColumn="ope" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fech" DataSourceName="def.logicop.resumen_comision" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="P" ColumnName="fech" DataSourceName="def.logicop.resumen_comision" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@P" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_viajesTableAdapter" GeneratorDataComponentClassName="vista_viajesTableAdapter" Name="vista_viajes" UserDataComponentName="vista_viajesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.vista_viajes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ope`, `mes`, `ano`, `viajes` FROM `logicop`.`vista_viajes`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ope" DataSetColumn="ope" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="ano" DataSetColumn="ano" />
+              <Mapping SourceColumn="viajes" DataSetColumn="viajes" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.vista_viajes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ope, mes, ano, viajes
+FROM           vista_viajes
+WHERE        (ope = @Param1) AND (mes = @Param2) AND (ano = @Param3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="ope" DataSourceName="def.logicop.vista_viajes" DataTypeServer="varchar(80)(80)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="80" SourceColumn="ope" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="mes" DataSourceName="def.logicop.vista_viajes" DataTypeServer="bigint(20)" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="ano" DataSourceName="def.logicop.vista_viajes" DataTypeServer="bigint(20)" DbType="Int64" Direction="Input" ParameterName="@Param3" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="ano" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.vista_viajes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ope, mes, ano, viajes
+FROM            vista_viajes
+WHERE        (mes = @Param1) AND (ano = @Param2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="mes" DataSourceName="def.logicop.vista_viajes" DataTypeServer="bigint(20)" DbType="Int64" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="ano" DataSourceName="def.logicop.vista_viajes" DataTypeServer="bigint(20)" DbType="Int64" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="ano" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.vista_viajes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ope, mes, ano, viajes
+FROM            vista_viajes
+WHERE        (ope = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="ope" DataSourceName="def.logicop.vista_viajes" DataTypeServer="varchar(80)(80)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="80" SourceColumn="ope" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.vista_viajes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ope, mes, ano, viajes
+FROM      vista_viajes
+WHERE        (ope &lt;&gt; @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="ope" DataSourceName="def.logicop.vista_viajes" DataTypeServer="varchar(80)(80)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="80" SourceColumn="ope" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstsalidasmatTableAdapter" GeneratorDataComponentClassName="lstsalidasmatTableAdapter" Name="lstsalidasmat" UserDataComponentName="lstsalidasmatTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nsis" DataSetColumn="nsis" />
+              <Mapping SourceColumn="nrec" DataSetColumn="nrec" />
+              <Mapping SourceColumn="fech" DataSetColumn="fech" />
+              <Mapping SourceColumn="cont" DataSetColumn="cont" />
+              <Mapping SourceColumn="mat" DataSetColumn="mat" />
+              <Mapping SourceColumn="occo" DataSetColumn="occo" />
+              <Mapping SourceColumn="ccos" DataSetColumn="ccos" />
+              <Mapping SourceColumn="lug" DataSetColumn="lug" />
+              <Mapping SourceColumn="tpven" DataSetColumn="tpven" />
+              <Mapping SourceColumn="equ" DataSetColumn="equ" />
+              <Mapping SourceColumn="ope" DataSetColumn="ope" />
+              <Mapping SourceColumn="cosm" DataSetColumn="cosm" />
+              <Mapping SourceColumn="flem" DataSetColumn="flem" />
+              <Mapping SourceColumn="tifkm" DataSetColumn="tifkm" />
+              <Mapping SourceColumn="timat" DataSetColumn="timat" />
+              <Mapping SourceColumn="anul" DataSetColumn="anul" />
+              <Mapping SourceColumn="matfle" DataSetColumn="matfle" />
+              <Mapping SourceColumn="ttra" DataSetColumn="ttra" />
+              <Mapping SourceColumn="cant" DataSetColumn="cant" />
+              <Mapping SourceColumn="hsal" DataSetColumn="hsal" />
+              <Mapping SourceColumn="occot" DataSetColumn="occot" />
+              <Mapping SourceColumn="ccost" DataSetColumn="ccost" />
+              <Mapping SourceColumn="prov" DataSetColumn="prov" />
+              <Mapping SourceColumn="flemt" DataSetColumn="flemt" />
+              <Mapping SourceColumn="tifkmt" DataSetColumn="tifkmt" />
+              <Mapping SourceColumn="matflet" DataSetColumn="matflet" />
+              <Mapping SourceColumn="timatt" DataSetColumn="timatt" />
+              <Mapping SourceColumn="rkm" DataSetColumn="rkm" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat` WHERE (cont = @c) AND (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="c" ColumnName="cont" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="varchar(80)(80)" DbType="String" Direction="Input" ParameterName="@c" Precision="0" ProviderType="VarChar" Scale="0" Size="80" SourceColumn="cont" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat` WHERE (fech = @a)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat` WHERE (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat` WHERE (CCOS= @c) AND (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="c" ColumnName="ccos" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@c" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ccos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidasmat" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="FillBy4" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy4">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `nsis`, `nrec`, `fech`, `cont`, `mat`, `occo`, `ccos`, `lug`, `tpven`, `equ`, `ope`, `cosm`, `flem`, `tifkm`, `timat`, `anul`, `matfle`, `ttra`, `cant`, `hsal`, `occot`, `ccost`, `prov`, `flemt`, `tifkmt`, `matflet`, `timatt`, `rkm` FROM `logicop`.`lstsalidasmat`
+WHERE (prov= @c) AND (fech BETWEEN @a AND @b)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="c" ColumnName="prov" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@c" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="prov" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="fech" DataSourceName="def.logicop.lstsalidasmat" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fech" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="redimiento_por_equipoTableAdapter" GeneratorDataComponentClassName="redimiento_por_equipoTableAdapter" Name="redimiento_por_equipo" UserDataComponentName="redimiento_por_equipoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.redimiento_por_equipo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `acceso`, `ope`, `equ`, `mes`, `ano`, `viajes` FROM `logicop`.`redimiento_por_equipo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="acceso" DataSetColumn="acceso" />
+              <Mapping SourceColumn="ope" DataSetColumn="ope" />
+              <Mapping SourceColumn="equ" DataSetColumn="equ" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="ano" DataSetColumn="ano" />
+              <Mapping SourceColumn="viajes" DataSetColumn="viajes" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.redimiento_por_equipo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `acceso`, `ope`, `equ`, `mes`, `ano`, `viajes` FROM `logicop`.`redimiento_por_equipo`
+where mes between @a and @b</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="a" ColumnName="mes" DataSourceName="def.logicop.redimiento_por_equipo" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@a" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="b" ColumnName="mes" DataSourceName="def.logicop.redimiento_por_equipo" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@b" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstresumenproyectosTableAdapter" GeneratorDataComponentClassName="lstresumenproyectosTableAdapter" Name="lstresumenproyectos" UserDataComponentName="lstresumenproyectosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstresumenproyectos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nomclie`, `nomproy`, `num_rec`, `flem`, `tifkm`, `timac`, `matfle`, `flemt`, `tifkmt`, `timatt`, `matflet` FROM `logicop`.`lstresumenproyectos`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomclie" DataSetColumn="nomclie" />
+              <Mapping SourceColumn="nomproy" DataSetColumn="nomproy" />
+              <Mapping SourceColumn="num_rec" DataSetColumn="num_rec" />
+              <Mapping SourceColumn="flem" DataSetColumn="flem" />
+              <Mapping SourceColumn="tifkm" DataSetColumn="tifkm" />
+              <Mapping SourceColumn="timac" DataSetColumn="timac" />
+              <Mapping SourceColumn="matfle" DataSetColumn="matfle" />
+              <Mapping SourceColumn="flemt" DataSetColumn="flemt" />
+              <Mapping SourceColumn="tifkmt" DataSetColumn="tifkmt" />
+              <Mapping SourceColumn="timatt" DataSetColumn="timatt" />
+              <Mapping SourceColumn="matflet" DataSetColumn="matflet" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstentradas_x_canterasTableAdapter" GeneratorDataComponentClassName="lstentradas_x_canterasTableAdapter" Name="lstentradas_x_canteras" UserDataComponentName="lstentradas_x_canterasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstentradas_x_canteras" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `prov`, `mes`, `total` FROM `logicop`.`lstentradas_x_canteras`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="prov" DataSetColumn="prov" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        prov, mes, total
+FROM           logicop.lstentradas_x_canteras
+WHERE        (prov = @Param1)
+LIMIT 5
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="prov" DataSourceName="" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="prov" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstsalidas_x_ccosTableAdapter" GeneratorDataComponentClassName="lstsalidas_x_ccosTableAdapter" Name="lstsalidas_x_ccos" UserDataComponentName="lstsalidas_x_ccosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstsalidas_x_ccos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nomproy, mes, total, ccos FROM def.logicop.lstsalidas_x_ccos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomproy" DataSetColumn="nomproy" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        nomproy, mes, total
+FROM         logicop.lstsalidas_x_ccos
+WHERE        (nomproy = @Param1)
+LIMIT 5</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="nomproy" DataSourceName="" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomproy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lstprov_salidasTableAdapter" GeneratorDataComponentClassName="lstprov_salidasTableAdapter" Name="lstprov_salidas" UserDataComponentName="lstprov_salidasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstprov_salidas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `prove`, `nomprov`, `mes`, `total` FROM `logicop`.`lstprov_salidas`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="prove" DataSetColumn="prove" />
+              <Mapping SourceColumn="nomprov" DataSetColumn="nomprov" />
+              <Mapping SourceColumn="mes" DataSetColumn="mes" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="logicopConnectionString1 (Settings)" DbObjectName="def.logicop.lstprov_salidas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        prove, nomprov, mes, total 
+FROM            logicop.lstprov_salidas
+WHERE        (nomprov = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="nomprov" DataSourceName="def.logicop.lstprov_salidas" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nomprov" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="logicopDataSet" msdata:IsDataSet="true" msdata:Locale="" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="logicopDataSet" msprop:Generator_UserDSName="logicopDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="lstentradasmat" msprop:Generator_TableClassName="lstentradasmatDataTable" msprop:Generator_TableVarName="tablelstentradasmat" msprop:Generator_TablePropName="lstentradasmat" msprop:Generator_RowDeletingName="lstentradasmatRowDeleting" msprop:Generator_UserTableName="lstentradasmat" msprop:Generator_RowChangingName="lstentradasmatRowChanging" msprop:Generator_RowEvHandlerName="lstentradasmatRowChangeEventHandler" msprop:Generator_RowDeletedName="lstentradasmatRowDeleted" msprop:Generator_RowEvArgName="lstentradasmatRowChangeEvent" msprop:Generator_RowChangedName="lstentradasmatRowChanged" msprop:Generator_RowClassName="lstentradasmatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nsis" msprop:Generator_ColumnVarNameInTable="columnnsis" msprop:Generator_ColumnPropNameInRow="nsis" msprop:Generator_ColumnPropNameInTable="nsisColumn" msprop:Generator_UserColumnName="nsis">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nrec" msprop:Generator_ColumnVarNameInTable="columnnrec" msprop:Generator_ColumnPropNameInRow="nrec" msprop:Generator_ColumnPropNameInTable="nrecColumn" msprop:Generator_UserColumnName="nrec">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fech" msprop:Generator_ColumnVarNameInTable="columnfech" msprop:Generator_ColumnPropNameInRow="fech" msprop:Generator_ColumnPropNameInTable="fechColumn" msprop:Generator_UserColumnName="fech" type="xs:dateTime" />
+              <xs:element name="prov" msprop:Generator_ColumnVarNameInTable="columnprov" msprop:Generator_ColumnPropNameInRow="prov" msprop:Generator_ColumnPropNameInTable="provColumn" msprop:Generator_UserColumnName="prov">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="equ" msprop:Generator_ColumnVarNameInTable="columnequ" msprop:Generator_ColumnPropNameInRow="equ" msprop:Generator_ColumnPropNameInTable="equColumn" msprop:Generator_UserColumnName="equ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ope" msprop:Generator_ColumnVarNameInTable="columnope" msprop:Generator_ColumnPropNameInRow="ope" msprop:Generator_ColumnPropNameInTable="opeColumn" msprop:Generator_UserColumnName="ope">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rkm" msprop:Generator_ColumnVarNameInTable="columnrkm" msprop:Generator_ColumnPropNameInRow="rkm" msprop:Generator_ColumnPropNameInTable="rkmColumn" msprop:Generator_UserColumnName="rkm" type="xs:decimal" />
+              <xs:element name="volm" msprop:Generator_ColumnVarNameInTable="columnvolm" msprop:Generator_ColumnPropNameInRow="volm" msprop:Generator_ColumnPropNameInTable="volmColumn" msprop:Generator_UserColumnName="volm" type="xs:decimal" />
+              <xs:element name="cosm" msprop:Generator_ColumnVarNameInTable="columncosm" msprop:Generator_ColumnPropNameInRow="cosm" msprop:Generator_ColumnPropNameInTable="cosmColumn" msprop:Generator_UserColumnName="cosm" type="xs:decimal" />
+              <xs:element name="flem" msprop:Generator_ColumnVarNameInTable="columnflem" msprop:Generator_ColumnPropNameInRow="flem" msprop:Generator_ColumnPropNameInTable="flemColumn" msprop:Generator_UserColumnName="flem" type="xs:decimal" />
+              <xs:element name="tifkm" msprop:Generator_ColumnVarNameInTable="columntifkm" msprop:Generator_ColumnPropNameInRow="tifkm" msprop:Generator_ColumnPropNameInTable="tifkmColumn" msprop:Generator_UserColumnName="tifkm" type="xs:decimal" />
+              <xs:element name="timat" msprop:Generator_ColumnVarNameInTable="columntimat" msprop:Generator_ColumnPropNameInRow="timat" msprop:Generator_ColumnPropNameInTable="timatColumn" msprop:Generator_UserColumnName="timat" type="xs:decimal" />
+              <xs:element name="anul" msprop:Generator_ColumnVarNameInTable="columnanul" msprop:Generator_ColumnPropNameInRow="anul" msprop:Generator_ColumnPropNameInTable="anulColumn" msprop:Generator_UserColumnName="anul" type="xs:boolean" />
+              <xs:element name="matfle" msprop:Generator_ColumnVarNameInTable="columnmatfle" msprop:Generator_ColumnPropNameInRow="matfle" msprop:Generator_ColumnPropNameInTable="matfleColumn" msprop:Generator_UserColumnName="matfle" type="xs:decimal" />
+              <xs:element name="ttra" msprop:Generator_ColumnVarNameInTable="columnttra" msprop:Generator_ColumnPropNameInRow="ttra" msprop:Generator_ColumnPropNameInTable="ttraColumn" msprop:Generator_UserColumnName="ttra">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hini" msprop:Generator_ColumnVarNameInTable="columnhini" msprop:Generator_ColumnPropNameInRow="hini" msprop:Generator_ColumnPropNameInTable="hiniColumn" msprop:Generator_UserColumnName="hini">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hfin" msprop:Generator_ColumnVarNameInTable="columnhfin" msprop:Generator_ColumnPropNameInRow="hfin" msprop:Generator_ColumnPropNameInTable="hfinColumn" msprop:Generator_UserColumnName="hfin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dcarg" msprop:Generator_ColumnVarNameInTable="columndcarg" msprop:Generator_ColumnPropNameInRow="dcarg" msprop:Generator_ColumnPropNameInTable="dcargColumn" msprop:Generator_UserColumnName="dcarg">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="resumen_comision" msprop:Generator_TableClassName="resumen_comisionDataTable" msprop:Generator_TableVarName="tableresumen_comision" msprop:Generator_TablePropName="resumen_comision" msprop:Generator_RowDeletingName="resumen_comisionRowDeleting" msprop:Generator_UserTableName="resumen_comision" msprop:Generator_RowChangingName="resumen_comisionRowChanging" msprop:Generator_RowEvHandlerName="resumen_comisionRowChangeEventHandler" msprop:Generator_RowDeletedName="resumen_comisionRowDeleted" msprop:Generator_RowEvArgName="resumen_comisionRowChangeEvent" msprop:Generator_RowChangedName="resumen_comisionRowChanged" msprop:Generator_RowClassName="resumen_comisionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fech" msprop:Generator_ColumnVarNameInTable="columnfech" msprop:Generator_ColumnPropNameInRow="fech" msprop:Generator_ColumnPropNameInTable="fechColumn" msprop:Generator_UserColumnName="fech" type="xs:dateTime" />
+              <xs:element name="ACCESO" msprop:Generator_ColumnVarNameInTable="columnACCESO" msprop:Generator_ColumnPropNameInRow="ACCESO" msprop:Generator_ColumnPropNameInTable="ACCESOColumn" msprop:Generator_UserColumnName="ACCESO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ope" msprop:Generator_ColumnVarNameInTable="columnope" msprop:Generator_ColumnPropNameInRow="ope" msprop:Generator_ColumnPropNameInTable="opeColumn" msprop:Generator_UserColumnName="ope" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomempl" msprop:Generator_ColumnVarNameInTable="columnnomempl" msprop:Generator_ColumnPropNameInRow="nomempl" msprop:Generator_ColumnPropNameInTable="nomemplColumn" msprop:Generator_UserColumnName="nomempl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="viajes" msprop:Generator_ColumnVarNameInTable="columnviajes" msprop:Generator_ColumnPropNameInRow="viajes" msprop:Generator_ColumnPropNameInTable="viajesColumn" msprop:Generator_UserColumnName="viajes" type="xs:long" />
+              <xs:element name="recorrido" msprop:Generator_ColumnVarNameInTable="columnrecorrido" msprop:Generator_ColumnPropNameInRow="recorrido" msprop:Generator_ColumnPropNameInTable="recorridoColumn" msprop:Generator_UserColumnName="recorrido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="rec_km_fle" msprop:Generator_ColumnVarNameInTable="columnrec_km_fle" msprop:Generator_ColumnPropNameInRow="rec_km_fle" msprop:Generator_ColumnPropNameInTable="rec_km_fleColumn" msprop:Generator_UserColumnName="rec_km_fle" type="xs:decimal" minOccurs="0" />
+              <xs:element name="comision" msprop:Generator_ColumnVarNameInTable="columncomision" msprop:Generator_ColumnPropNameInRow="comision" msprop:Generator_ColumnPropNameInTable="comisionColumn" msprop:Generator_UserColumnName="comision" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vista_viajes" msprop:Generator_TableClassName="vista_viajesDataTable" msprop:Generator_TableVarName="tablevista_viajes" msprop:Generator_TablePropName="vista_viajes" msprop:Generator_RowDeletingName="vista_viajesRowDeleting" msprop:Generator_UserTableName="vista_viajes" msprop:Generator_RowChangingName="vista_viajesRowChanging" msprop:Generator_RowEvHandlerName="vista_viajesRowChangeEventHandler" msprop:Generator_RowDeletedName="vista_viajesRowDeleted" msprop:Generator_RowEvArgName="vista_viajesRowChangeEvent" msprop:Generator_RowChangedName="vista_viajesRowChanged" msprop:Generator_RowClassName="vista_viajesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ope" msprop:Generator_ColumnVarNameInTable="columnope" msprop:Generator_ColumnPropNameInRow="ope" msprop:Generator_ColumnPropNameInTable="opeColumn" msprop:Generator_UserColumnName="ope" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:long" minOccurs="0" />
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:long" minOccurs="0" />
+              <xs:element name="viajes" msprop:Generator_ColumnVarNameInTable="columnviajes" msprop:Generator_ColumnPropNameInRow="viajes" msprop:Generator_ColumnPropNameInTable="viajesColumn" msprop:Generator_UserColumnName="viajes" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstsalidasmat" msprop:Generator_TableClassName="lstsalidasmatDataTable" msprop:Generator_TableVarName="tablelstsalidasmat" msprop:Generator_TablePropName="lstsalidasmat" msprop:Generator_RowDeletingName="lstsalidasmatRowDeleting" msprop:Generator_UserTableName="lstsalidasmat" msprop:Generator_RowChangingName="lstsalidasmatRowChanging" msprop:Generator_RowEvHandlerName="lstsalidasmatRowChangeEventHandler" msprop:Generator_RowDeletedName="lstsalidasmatRowDeleted" msprop:Generator_RowEvArgName="lstsalidasmatRowChangeEvent" msprop:Generator_RowChangedName="lstsalidasmatRowChanged" msprop:Generator_RowClassName="lstsalidasmatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nsis" msprop:Generator_ColumnVarNameInTable="columnnsis" msprop:Generator_ColumnPropNameInRow="nsis" msprop:Generator_ColumnPropNameInTable="nsisColumn" msprop:Generator_UserColumnName="nsis">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nrec" msprop:Generator_ColumnVarNameInTable="columnnrec" msprop:Generator_ColumnPropNameInRow="nrec" msprop:Generator_ColumnPropNameInTable="nrecColumn" msprop:Generator_UserColumnName="nrec">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fech" msprop:Generator_ColumnVarNameInTable="columnfech" msprop:Generator_ColumnPropNameInRow="fech" msprop:Generator_ColumnPropNameInTable="fechColumn" msprop:Generator_UserColumnName="fech" type="xs:dateTime" />
+              <xs:element name="cont" msprop:Generator_ColumnVarNameInTable="columncont" msprop:Generator_ColumnPropNameInRow="cont" msprop:Generator_ColumnPropNameInTable="contColumn" msprop:Generator_UserColumnName="cont">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat" msprop:Generator_ColumnVarNameInTable="columnmat" msprop:Generator_ColumnPropNameInRow="mat" msprop:Generator_ColumnPropNameInTable="matColumn" msprop:Generator_UserColumnName="mat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="occo" msprop:Generator_ColumnVarNameInTable="columnocco" msprop:Generator_ColumnPropNameInRow="occo" msprop:Generator_ColumnPropNameInTable="occoColumn" msprop:Generator_UserColumnName="occo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ccos" msprop:Generator_ColumnVarNameInTable="columnccos" msprop:Generator_ColumnPropNameInRow="ccos" msprop:Generator_ColumnPropNameInTable="ccosColumn" msprop:Generator_UserColumnName="ccos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lug" msprop:Generator_ColumnVarNameInTable="columnlug" msprop:Generator_ColumnPropNameInRow="lug" msprop:Generator_ColumnPropNameInTable="lugColumn" msprop:Generator_UserColumnName="lug" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tpven" msprop:Generator_ColumnVarNameInTable="columntpven" msprop:Generator_ColumnPropNameInRow="tpven" msprop:Generator_ColumnPropNameInTable="tpvenColumn" msprop:Generator_UserColumnName="tpven">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="equ" msprop:Generator_ColumnVarNameInTable="columnequ" msprop:Generator_ColumnPropNameInRow="equ" msprop:Generator_ColumnPropNameInTable="equColumn" msprop:Generator_UserColumnName="equ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ope" msprop:Generator_ColumnVarNameInTable="columnope" msprop:Generator_ColumnPropNameInRow="ope" msprop:Generator_ColumnPropNameInTable="opeColumn" msprop:Generator_UserColumnName="ope" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cosm" msprop:Generator_ColumnVarNameInTable="columncosm" msprop:Generator_ColumnPropNameInRow="cosm" msprop:Generator_ColumnPropNameInTable="cosmColumn" msprop:Generator_UserColumnName="cosm" type="xs:decimal" />
+              <xs:element name="flem" msprop:Generator_ColumnVarNameInTable="columnflem" msprop:Generator_ColumnPropNameInRow="flem" msprop:Generator_ColumnPropNameInTable="flemColumn" msprop:Generator_UserColumnName="flem" type="xs:decimal" />
+              <xs:element name="tifkm" msprop:Generator_ColumnVarNameInTable="columntifkm" msprop:Generator_ColumnPropNameInRow="tifkm" msprop:Generator_ColumnPropNameInTable="tifkmColumn" msprop:Generator_UserColumnName="tifkm" type="xs:decimal" />
+              <xs:element name="timat" msprop:Generator_ColumnVarNameInTable="columntimat" msprop:Generator_ColumnPropNameInRow="timat" msprop:Generator_ColumnPropNameInTable="timatColumn" msprop:Generator_UserColumnName="timat" type="xs:decimal" />
+              <xs:element name="anul" msprop:Generator_ColumnVarNameInTable="columnanul" msprop:Generator_ColumnPropNameInRow="anul" msprop:Generator_ColumnPropNameInTable="anulColumn" msprop:Generator_UserColumnName="anul" type="xs:boolean" />
+              <xs:element name="matfle" msprop:Generator_ColumnVarNameInTable="columnmatfle" msprop:Generator_ColumnPropNameInRow="matfle" msprop:Generator_ColumnPropNameInTable="matfleColumn" msprop:Generator_UserColumnName="matfle" type="xs:decimal" />
+              <xs:element name="ttra" msprop:Generator_ColumnVarNameInTable="columnttra" msprop:Generator_ColumnPropNameInRow="ttra" msprop:Generator_ColumnPropNameInTable="ttraColumn" msprop:Generator_UserColumnName="ttra">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cant" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_UserColumnName="cant" type="xs:decimal" />
+              <xs:element name="hsal" msprop:Generator_ColumnVarNameInTable="columnhsal" msprop:Generator_ColumnPropNameInRow="hsal" msprop:Generator_ColumnPropNameInTable="hsalColumn" msprop:Generator_UserColumnName="hsal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="occot" msprop:Generator_ColumnVarNameInTable="columnoccot" msprop:Generator_ColumnPropNameInRow="occot" msprop:Generator_ColumnPropNameInTable="occotColumn" msprop:Generator_UserColumnName="occot" type="xs:unsignedInt" />
+              <xs:element name="ccost" msprop:Generator_ColumnVarNameInTable="columnccost" msprop:Generator_ColumnPropNameInRow="ccost" msprop:Generator_ColumnPropNameInTable="ccostColumn" msprop:Generator_UserColumnName="ccost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prov" msprop:Generator_ColumnVarNameInTable="columnprov" msprop:Generator_ColumnPropNameInRow="prov" msprop:Generator_ColumnPropNameInTable="provColumn" msprop:Generator_UserColumnName="prov" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="flemt" msprop:Generator_ColumnVarNameInTable="columnflemt" msprop:Generator_ColumnPropNameInRow="flemt" msprop:Generator_ColumnPropNameInTable="flemtColumn" msprop:Generator_UserColumnName="flemt" type="xs:decimal" />
+              <xs:element name="tifkmt" msprop:Generator_ColumnVarNameInTable="columntifkmt" msprop:Generator_ColumnPropNameInRow="tifkmt" msprop:Generator_ColumnPropNameInTable="tifkmtColumn" msprop:Generator_UserColumnName="tifkmt" type="xs:decimal" />
+              <xs:element name="matflet" msprop:Generator_ColumnVarNameInTable="columnmatflet" msprop:Generator_ColumnPropNameInRow="matflet" msprop:Generator_ColumnPropNameInTable="matfletColumn" msprop:Generator_UserColumnName="matflet" type="xs:decimal" />
+              <xs:element name="timatt" msprop:Generator_ColumnVarNameInTable="columntimatt" msprop:Generator_ColumnPropNameInRow="timatt" msprop:Generator_ColumnPropNameInTable="timattColumn" msprop:Generator_UserColumnName="timatt" type="xs:decimal" />
+              <xs:element name="rkm" msprop:Generator_ColumnVarNameInTable="columnrkm" msprop:Generator_ColumnPropNameInRow="rkm" msprop:Generator_ColumnPropNameInTable="rkmColumn" msprop:Generator_UserColumnName="rkm" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="redimiento_por_equipo" msprop:Generator_TableClassName="redimiento_por_equipoDataTable" msprop:Generator_TableVarName="tableredimiento_por_equipo" msprop:Generator_TablePropName="redimiento_por_equipo" msprop:Generator_RowDeletingName="redimiento_por_equipoRowDeleting" msprop:Generator_UserTableName="redimiento_por_equipo" msprop:Generator_RowChangingName="redimiento_por_equipoRowChanging" msprop:Generator_RowEvHandlerName="redimiento_por_equipoRowChangeEventHandler" msprop:Generator_RowDeletedName="redimiento_por_equipoRowDeleted" msprop:Generator_RowEvArgName="redimiento_por_equipoRowChangeEvent" msprop:Generator_RowChangedName="redimiento_por_equipoRowChanged" msprop:Generator_RowClassName="redimiento_por_equipoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acceso" msprop:Generator_ColumnVarNameInTable="columnacceso" msprop:Generator_ColumnPropNameInRow="acceso" msprop:Generator_ColumnPropNameInTable="accesoColumn" msprop:Generator_UserColumnName="acceso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ope" msprop:Generator_ColumnVarNameInTable="columnope" msprop:Generator_ColumnPropNameInRow="ope" msprop:Generator_ColumnPropNameInTable="opeColumn" msprop:Generator_UserColumnName="ope" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="equ" msprop:Generator_ColumnVarNameInTable="columnequ" msprop:Generator_ColumnPropNameInRow="equ" msprop:Generator_ColumnPropNameInTable="equColumn" msprop:Generator_UserColumnName="equ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:long" minOccurs="0" />
+              <xs:element name="viajes" msprop:Generator_ColumnVarNameInTable="columnviajes" msprop:Generator_ColumnPropNameInRow="viajes" msprop:Generator_ColumnPropNameInTable="viajesColumn" msprop:Generator_UserColumnName="viajes" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstresumenproyectos" msprop:Generator_TableClassName="lstresumenproyectosDataTable" msprop:Generator_TableVarName="tablelstresumenproyectos" msprop:Generator_TablePropName="lstresumenproyectos" msprop:Generator_RowDeletingName="lstresumenproyectosRowDeleting" msprop:Generator_UserTableName="lstresumenproyectos" msprop:Generator_RowChangingName="lstresumenproyectosRowChanging" msprop:Generator_RowEvHandlerName="lstresumenproyectosRowChangeEventHandler" msprop:Generator_RowDeletedName="lstresumenproyectosRowDeleted" msprop:Generator_RowEvArgName="lstresumenproyectosRowChangeEvent" msprop:Generator_RowChangedName="lstresumenproyectosRowChanged" msprop:Generator_RowClassName="lstresumenproyectosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomclie" msprop:Generator_ColumnVarNameInTable="columnnomclie" msprop:Generator_ColumnPropNameInRow="nomclie" msprop:Generator_ColumnPropNameInTable="nomclieColumn" msprop:Generator_UserColumnName="nomclie">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomproy" msprop:Generator_ColumnVarNameInTable="columnnomproy" msprop:Generator_ColumnPropNameInRow="nomproy" msprop:Generator_ColumnPropNameInTable="nomproyColumn" msprop:Generator_UserColumnName="nomproy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="num_rec" msprop:Generator_ColumnVarNameInTable="columnnum_rec" msprop:Generator_ColumnPropNameInRow="num_rec" msprop:Generator_ColumnPropNameInTable="num_recColumn" msprop:Generator_UserColumnName="num_rec" type="xs:long" />
+              <xs:element name="flem" msprop:Generator_ColumnVarNameInTable="columnflem" msprop:Generator_ColumnPropNameInRow="flem" msprop:Generator_ColumnPropNameInTable="flemColumn" msprop:Generator_UserColumnName="flem" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tifkm" msprop:Generator_ColumnVarNameInTable="columntifkm" msprop:Generator_ColumnPropNameInRow="tifkm" msprop:Generator_ColumnPropNameInTable="tifkmColumn" msprop:Generator_UserColumnName="tifkm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="timac" msprop:Generator_ColumnVarNameInTable="columntimac" msprop:Generator_ColumnPropNameInRow="timac" msprop:Generator_ColumnPropNameInTable="timacColumn" msprop:Generator_UserColumnName="timac" type="xs:decimal" minOccurs="0" />
+              <xs:element name="matfle" msprop:Generator_ColumnVarNameInTable="columnmatfle" msprop:Generator_ColumnPropNameInRow="matfle" msprop:Generator_ColumnPropNameInTable="matfleColumn" msprop:Generator_UserColumnName="matfle" type="xs:decimal" minOccurs="0" />
+              <xs:element name="flemt" msprop:Generator_ColumnVarNameInTable="columnflemt" msprop:Generator_ColumnPropNameInRow="flemt" msprop:Generator_ColumnPropNameInTable="flemtColumn" msprop:Generator_UserColumnName="flemt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tifkmt" msprop:Generator_ColumnVarNameInTable="columntifkmt" msprop:Generator_ColumnPropNameInRow="tifkmt" msprop:Generator_ColumnPropNameInTable="tifkmtColumn" msprop:Generator_UserColumnName="tifkmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="timatt" msprop:Generator_ColumnVarNameInTable="columntimatt" msprop:Generator_ColumnPropNameInRow="timatt" msprop:Generator_ColumnPropNameInTable="timattColumn" msprop:Generator_UserColumnName="timatt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="matflet" msprop:Generator_ColumnVarNameInTable="columnmatflet" msprop:Generator_ColumnPropNameInRow="matflet" msprop:Generator_ColumnPropNameInTable="matfletColumn" msprop:Generator_UserColumnName="matflet" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstentradas_x_canteras" msprop:Generator_TableClassName="lstentradas_x_canterasDataTable" msprop:Generator_TableVarName="tablelstentradas_x_canteras" msprop:Generator_TablePropName="lstentradas_x_canteras" msprop:Generator_RowDeletingName="lstentradas_x_canterasRowDeleting" msprop:Generator_UserTableName="lstentradas_x_canteras" msprop:Generator_RowChangingName="lstentradas_x_canterasRowChanging" msprop:Generator_RowEvHandlerName="lstentradas_x_canterasRowChangeEventHandler" msprop:Generator_RowDeletedName="lstentradas_x_canterasRowDeleted" msprop:Generator_RowEvArgName="lstentradas_x_canterasRowChangeEvent" msprop:Generator_RowChangedName="lstentradas_x_canterasRowChanged" msprop:Generator_RowClassName="lstentradas_x_canterasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prov" msprop:Generator_ColumnVarNameInTable="columnprov" msprop:Generator_ColumnPropNameInRow="prov" msprop:Generator_ColumnPropNameInTable="provColumn" msprop:Generator_UserColumnName="prov">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstsalidas_x_ccos" msprop:Generator_TableClassName="lstsalidas_x_ccosDataTable" msprop:Generator_TableVarName="tablelstsalidas_x_ccos" msprop:Generator_TablePropName="lstsalidas_x_ccos" msprop:Generator_RowDeletingName="lstsalidas_x_ccosRowDeleting" msprop:Generator_UserTableName="lstsalidas_x_ccos" msprop:Generator_RowChangingName="lstsalidas_x_ccosRowChanging" msprop:Generator_RowEvHandlerName="lstsalidas_x_ccosRowChangeEventHandler" msprop:Generator_RowDeletedName="lstsalidas_x_ccosRowDeleted" msprop:Generator_RowEvArgName="lstsalidas_x_ccosRowChangeEvent" msprop:Generator_RowChangedName="lstsalidas_x_ccosRowChanged" msprop:Generator_RowClassName="lstsalidas_x_ccosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomproy" msprop:Generator_ColumnVarNameInTable="columnnomproy" msprop:Generator_ColumnPropNameInRow="nomproy" msprop:Generator_ColumnPropNameInTable="nomproyColumn" msprop:Generator_UserColumnName="nomproy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lstprov_salidas" msprop:Generator_TableClassName="lstprov_salidasDataTable" msprop:Generator_TableVarName="tablelstprov_salidas" msprop:Generator_TablePropName="lstprov_salidas" msprop:Generator_RowDeletingName="lstprov_salidasRowDeleting" msprop:Generator_UserTableName="lstprov_salidas" msprop:Generator_RowChangingName="lstprov_salidasRowChanging" msprop:Generator_RowEvHandlerName="lstprov_salidasRowChangeEventHandler" msprop:Generator_RowDeletedName="lstprov_salidasRowDeleted" msprop:Generator_RowEvArgName="lstprov_salidasRowChangeEvent" msprop:Generator_RowChangedName="lstprov_salidasRowChanged" msprop:Generator_RowClassName="lstprov_salidasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prove" msprop:Generator_ColumnVarNameInTable="columnprove" msprop:Generator_ColumnPropNameInRow="prove" msprop:Generator_ColumnPropNameInTable="proveColumn" msprop:Generator_UserColumnName="prove" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomprov" msprop:Generator_ColumnVarNameInTable="columnnomprov" msprop:Generator_ColumnPropNameInRow="nomprov" msprop:Generator_ColumnPropNameInTable="nomprovColumn" msprop:Generator_UserColumnName="nomprov">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mes" msprop:Generator_ColumnVarNameInTable="columnmes" msprop:Generator_ColumnPropNameInRow="mes" msprop:Generator_ColumnPropNameInTable="mesColumn" msprop:Generator_UserColumnName="mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lstentradasmat" />
+      <xs:field xpath="mstns:nsis" />
+      <xs:field xpath="mstns:nrec" />
+    </xs:unique>
+    <xs:unique name="lstsalidasmat_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lstsalidasmat" />
+      <xs:field xpath="mstns:nrec" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
